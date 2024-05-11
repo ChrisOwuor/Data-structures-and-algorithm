@@ -12,6 +12,23 @@
  *
  */
 
+const count_words = (words) => {
+  let words_arr = words.split(" ");
+
+  let word_obj = {};
+
+  for (let i = 0; i < words_arr.length; i++) {
+    let word = words_arr[i];
+    if (word in word_obj) {
+      word_obj[word]++;
+    } else {
+      word_obj[word] = 1;
+    }
+  }
+  return word_obj;
+};
+console.log(count_words("hello world hello school hello world hello"));
+
 const countWords = (str) => {
   let word_obj = {};
   let str_arr = str.split(" ");
