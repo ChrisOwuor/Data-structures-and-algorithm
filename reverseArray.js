@@ -25,3 +25,22 @@ const reverseArray = (arr) => {
 };
 
 console.log(reverseArray([1, 2, 3, 4]));
+
+const reverse = (arr) => {
+  let start = 0;
+  let end = arr.length - 1;
+
+  for (let i = 0; start < end; i++) {
+    let first = arr[start];
+    let last = arr[end];
+
+    arr[start] = last;
+    arr[end] = first;
+
+    start++;
+    end--;
+  }
+  return arr;
+};
+
+console.log(reverse([1, 2, 3, 4, 5]));

@@ -15,4 +15,13 @@ capitalizeWords(["hello", "world"]) should return ["Hello", "World"].
  * 
  */
 
-console.log("name".slice(1));
+const capitalizeWords = (words) => {
+  let newWords = [];
+
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    newWords.push(word[0].toUpperCase() + word.slice(1));
+  }
+  return newWords;
+};
+console.log(capitalizeWords(["hello", "world"]));
